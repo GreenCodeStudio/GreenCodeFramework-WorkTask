@@ -95,6 +95,8 @@ export class add {
         let form = new FormManager(page.querySelector('form'));
             loadColumnsSelect(page, data.selects.work_task_column);
 
+        form.loadUrlQuery();
+
         form.submit = async newData => {
             await Ajax.WorkTask.insert(newData);
             pageManager.goto('/WorkTask');

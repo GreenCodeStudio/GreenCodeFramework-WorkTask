@@ -13,5 +13,23 @@
             <strong>{{item.name}}</strong>
         </div>
         </section>
+    <section class="card action-show columnsCard">
+        <div class="columns">
+            <:foreach collection=item.columns item=column>
+                <div class="column">
+                    <h2>{{column.name}}</h2>
+                    <div class="tasks">
+
+                        <:foreach collection=column.tasks item=task>
+                                <a class="task" href="/WorkTask/show/":task.id >
+                                    <h3>{{task.title}}</h3>
+                                </a>
+                        </:foreach>
+                    </div>
+                    <a href="/WorkTask/add?workTaskColumn_id=":column.id class="button icon-add">{{t("CommonBase.add")}}</a>
+                </div>
+            </:foreach>
+        </div>
+    </section>
     </div>
 </form>

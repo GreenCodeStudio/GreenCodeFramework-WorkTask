@@ -48,5 +48,10 @@ class WorkTaskProject extends \Core\BussinesLogic
         return $this->defaultDB->getAll();
     }
 
+    public function getByIdWithTasks(int $id)
+    {
+        return $this->defaultDB->getByIdWithTasks($id);
+    }
+
 
 }

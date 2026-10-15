@@ -1,0 +1,27 @@
+.page-WorkTaskProject {
+    .columnsCard {
+        overflow: auto;
+    }
+
+    .columns {
+        display: flex;
+        gap:16px;
+
+        .column {
+            flex: 1 0 300px;
+            display: flex;
+            flex-direction: column;
+            .tasks{
+                flex-grow: 1;
+            }
+        }
+    }
+
+    .task {
+        display: block;
+        margin: 16px 0;
+        h3{
+            margin: 0;
+        }
+    }
+}

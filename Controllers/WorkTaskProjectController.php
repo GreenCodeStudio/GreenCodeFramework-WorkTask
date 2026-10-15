@@ -56,7 +56,7 @@ class WorkTaskProjectController extends \Common\PageStandardController
     {
         $this->will('WorkTask', 'show');
                 $WorkTaskProject = new \WorkTask\WorkTaskProject();
-        $data = $WorkTaskProject->getById($id);
+        $data = $WorkTaskProject->getByIdWithTasks($id);
         if ($data == null)
             throw new NotFoundException();
 

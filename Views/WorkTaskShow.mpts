@@ -15,7 +15,7 @@
             <span>{{t("WorkTask.WorkTask.description")}}:</span>
             <strong>{{item.description}}</strong>
         </div><div class="pseudoLabel">
-            <span>{{t("WorkTask.WorkTask.workTaskColumn_id")}}:</span>
+            <span>{{t("WorkTask.WorkTask.workTaskColumn")}}:</span>
             <strong>{{item.workTaskColumn_id}}</strong>
         </div>
         </section>

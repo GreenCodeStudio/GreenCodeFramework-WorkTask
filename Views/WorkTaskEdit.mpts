@@ -14,7 +14,7 @@
             <input type="text" name="title" required />
         </label><label>
             <span>{{t("WorkTask.WorkTask.description")}}</span>
-            <input type="text" name="description" required />
+            <input type="text" name="description" />
         </label><label>
             <span>{{t("WorkTask.WorkTask.workTaskColumn")}}</span>
             <select data-foreign-key="work_task_column" name="workTaskColumn_id" required > </select>

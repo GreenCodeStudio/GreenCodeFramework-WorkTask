@@ -43,4 +43,22 @@ class WorkTaskProjectRepository extends \Core\Repository
         else
             return DB::get("SELECT * FROM work_task_project");
     }
+
+    public function getByIdWithTasks(int $id)
+    {
+        $item = DB::get("SELECT * FROM work_task_project WHERE id = ?", [$id])[0] ?? null;
+        if (empty($item))
+            return null;
+    $item->columns = DB::get("SELECT * FROM work_task_column WHERE workTaskProject_id = ?", [$id]);
+    $columnsById = [];
+    foreach ($item->columns as $column) {
+            $columnsById[$column->id] = $column;
+            $column->tasks = [];
+    }
+        $tasks = DB::get("SELECT wt.* FROM work_task wt JOIN work_task_column wtc ON wt.workTaskColumn_id = wtc.id WHERE wtc.workTaskProject_id = ?", [$id]);
+        foreach ($tasks as $task) {
+            $columnsById[$task->workTaskColumn_id]->tasks[] = $task;
+        }
+        return $item;
+    }
 }
