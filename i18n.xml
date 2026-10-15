@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <node name="WorkTaskProject">
+        <node name="WorkTaskProject">
+            <value lang="pl">Projekt</value>
+            <value lang="en">Project</value>
+            <value lang="de">Projekt</value>
+            <value lang="cs">Projekt</value>
+            <value lang="ua">Проект</value>
+        </node>
+        <node name="id">
+            <value lang="en">id</value>
+        </node>
+        <node name="name">
+            <value lang="en">Name</value>
+            <value lang="pl">Nazwa</value>
+            <value lang="de">Name</value>
+            <value lang="cs">Název</value>
+            <value lang="ua">Назва</value>
+        </node>
+    </node>
+    <node name="WorkTaskProjectList">
+        <node name="header">
+            <value lang="pl">Lista projektów</value>
+            <value lang="en">List of projects</value>
+            <value lang="de">Liste der Projekte</value>
+            <value lang="cs">Seznam projektů</value>
+            <value lang="ua">Список проектів</value>
+        </node>
+    </node>
+    <node name="WorkTask">
+        <node name="WorkTask">
+            <value lang="en">Task</value>
+            <value lang="pl">Zadanie</value>
+            <value lang="de">Aufgabe</value>
+            <value lang="cs">Úkol</value>
+            <value lang="ua">Завдання</value>
+        </node>
+        <node name="id">
+            <value lang="en">id</value>
+        </node>
+        <node name="title">
+            <value lang="en">Title</value>
+            <value lang="pl">Tytuł</value>
+            <value lang="de">Titel</value>
+            <value lang="cs">Název</value>
+            <value lang="ua">Назва</value>
+        </node>
+        <node name="description">
+            <value lang="en">Description</value>
+            <value lang="pl">Opis</value>
+            <value lang="de">Beschreibung</value>
+            <value lang="cs">Popis</value>
+            <value lang="ua">Опис</value>
+        </node>
+        <node name="workTaskColumn">
+            <value lang="en">Project/Column</value>
+            <value lang="pl">Projekt/Kolumna</value>
+            <value lang="de">Projekt/Spalte</value>
+            <value lang="cs">Projekt/Sloupec</value>
+            <value lang="ua">Проект/Стовпець</value>
+        </node>
+    </node>
+    <node name="WorkTaskList">
+        <node name="header">
+            <value lang="en">List of tasks</value>
+            <value lang="pl">Lista zadań</value>
+            <value lang="de">Liste der Aufgaben</value>
+            <value lang="cs">Seznam úkolů</value>
+            <value lang="ua">Список завдань</value>
+        </node>
+    </node>
+</root>
