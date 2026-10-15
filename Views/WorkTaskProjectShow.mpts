@@ -1,0 +1,17 @@
+<form>
+    <div class="topBarButtons">
+        <a href=("/WorkTaskProject/edit/":item.id) class="button action-edit"><span class="icon-edit"></span>{{t("CommonBase.edit")}}</a>
+    </div>
+    <div class="grid page-WorkTaskProject page-WorkTaskProject-show">
+        <input name="id" type="hidden" />
+        <section class="card action-show" data-width="6">
+            <header>
+                <h1>{{t("WorkTask.WorkTaskProject.WorkTaskProject")}}</h1>
+            </header>
+          <div class="pseudoLabel">
+            <span>{{t("WorkTask.WorkTaskProject.name")}}:</span>
+            <strong>{{item.name}}</strong>
+        </div>
+        </section>
+    </div>
+</form>

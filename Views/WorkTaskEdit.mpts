@@ -1,0 +1,24 @@
+<form>
+    <div class="topBarButtons">
+        <a href="/WorkTask/" class="button"><span class="icon-cancel"></span>{{t("CommonBase.cancel")}}</a>
+        <button class=("button action-":type)><span class="icon-save"></span>{{t("CommonBase.save")}}</button>
+    </div>
+    <div class="grid page-WorkTask page-WorkTask-edit">
+        <input name="id" type="hidden" />
+        <section class=("card action-":type) data-width="6">
+            <header>
+                <h1>{{t("WorkTask.WorkTask.WorkTask")}}</h1>
+            </header>
+          <label>
+            <span>{{t("WorkTask.WorkTask.title")}}</span>
+            <input type="text" name="title" required />
+        </label><label>
+            <span>{{t("WorkTask.WorkTask.description")}}</span>
+            <input type="text" name="description" required />
+        </label><label>
+            <span>{{t("WorkTask.WorkTask.workTaskColumn")}}</span>
+            <select data-foreign-key="work_task_column" name="workTaskColumn_id" required > </select>
+        </label>
+        </section>
+    </div>
+</form>

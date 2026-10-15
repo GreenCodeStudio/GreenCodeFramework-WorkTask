@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <element>
+        <title>Tasks</title>
+        <icon>icon-worktaskproject</icon>
+    <menu>
+    <element>
+        <link>/WorkTaskProject</link>
+        <title>WorkTaskProject</title>
+    </element>
+    <element>
+        <link>/WorkTask</link>
+        <title>WorkTask</title>
+    </element>
+    </menu>
+    </element>
+</menu>
