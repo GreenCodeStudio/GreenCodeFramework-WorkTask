@@ -7,6 +7,7 @@ import {t as TCommonBase} from "../../../CommonBase/i18n.xml";
 import {ObjectsList} from "../../../Core/js/ObjectsList/objectsList";
 import {Permissions} from "../../../Core/js/permissions";
 import {create} from "fast-creator";
+import {show as CommentShowController} from "../../../Comment/js/Controllers/Comment";
 
 export class index {
     constructor(page, data) {
@@ -101,5 +102,12 @@ export class add {
             await Ajax.WorkTask.insert(newData);
             pageManager.goto('/WorkTask');
         }
+    }
+}
+
+export class show {
+    constructor(page, data, initInfo) {
+        this.page = page;
+        new CommentShowController(page, {objectType: 'WorkTask', objectId: initInfo.methodArguments[0]});
     }
 }

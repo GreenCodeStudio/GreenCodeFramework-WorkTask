@@ -3,6 +3,7 @@
 namespace WorkTask\Controllers;
 
 use Authorization\Permissions;
+use Comment\Comment;
 use Core\Exceptions\NotFoundException;
 class WorkTaskController extends \Common\PageStandardController
 {
@@ -53,7 +54,7 @@ class WorkTaskController extends \Common\PageStandardController
         $WorkTask = new \WorkTask\WorkTask();
         return ['selects' => $WorkTask->getSelects()];
     }
-    
+
         /**
      * @param int $id
      */
@@ -64,8 +65,10 @@ class WorkTaskController extends \Common\PageStandardController
         $data = $WorkTask->getById($id);
         if ($data == null)
             throw new NotFoundException();
-            
-        $this->addView('WorkTask', 'WorkTaskShow', ['item' => $data]);
+
+        $comments = (new Comment())->getToShow('WorkTask', $id);
+
+        $this->addView('WorkTask', 'WorkTaskShow', ['item' => $data, 'commentsData' => ['items'=>$comments]]);
         $this->pushBreadcrumb(['title' => 'WorkTask', 'url' => '/WorkTask']);
         $this->pushBreadcrumb(['title' => 'Szczegóły', 'url' => '/WorkTask/show/'.$id]);
     }
