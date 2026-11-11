@@ -25,7 +25,7 @@ class WorkTaskController extends \Common\PageStandardController
         $this->will('WorkTask', 'edit');
         $this->addView('WorkTask', 'WorkTaskEdit', ['type' => 'edit']);
         $this->pushBreadcrumb(['title' => 'WorkTask', 'url' => '/WorkTask']);
-        $this->pushBreadcrumb(['title' => 'Edycja', 'url' => '/WorkTask/edit/'.$id]);
+        $this->pushBreadcrumb(['title' => t('CommonBase.breadcrumb.edit'), 'url' => '/WorkTask/edit/'.$id]);
     }
 
     function edit_data(int $id)
@@ -46,7 +46,7 @@ class WorkTaskController extends \Common\PageStandardController
         $this->will('WorkTask', 'add');
         $this->addView('WorkTask', 'WorkTaskEdit', ['type' => 'add']);
         $this->pushBreadcrumb(['title' => 'WorkTask', 'url' => '/WorkTask']);
-        $this->pushBreadcrumb(['title' => 'Dodaj', 'url' => '/WorkTask/add']);
+        $this->pushBreadcrumb(['title' => t('CommonBase.breadcrumb.add'), 'url' => '/WorkTask/add']);
     }
     function add_data()
     {
@@ -70,6 +70,6 @@ class WorkTaskController extends \Common\PageStandardController
 
         $this->addView('WorkTask', 'WorkTaskShow', ['item' => $data, 'commentsData' => ['items'=>$comments]]);
         $this->pushBreadcrumb(['title' => 'WorkTask', 'url' => '/WorkTask']);
-        $this->pushBreadcrumb(['title' => 'Szczegóły', 'url' => '/WorkTask/show/'.$id]);
+        $this->pushBreadcrumb(['title' => t('CommonBase.breadcrumb.show'), 'url' => '/WorkTask/show/'.$id]);
     }
 }
